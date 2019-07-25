@@ -1,1 +1,4 @@
-alert('test');
+function test123()
+{
+  alert('test');
+}
