@@ -48,7 +48,8 @@
                          x02 :apex.item("P22_DATE_FIN").getValue(),   
                          x03:0,
                          x04:'NON',
-                         x05:apex.item("P22_DATE_FIN").getValue()
+                         x05:apex.item("P22_DATE_FIN").getValue(),
+                         x06:0
                         },
                         {
                             success: function (pData2){
