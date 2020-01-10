@@ -182,3 +182,12 @@ function getRandomColor() {
     return color;
 }
 
+
+   function showNodeInfo( node ){
+
+    $('#info').html( infoTemplate( node.data())).show();
+  }
+
+  function hideNodeInfo(){
+    $('#info').hide();
+  }
