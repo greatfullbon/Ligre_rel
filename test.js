@@ -191,3 +191,88 @@ function getRandomColor() {
   function hideNodeInfo(){
     $('#info').hide();
   }
+     // Quand l'utilisateur clique sur le bouton filtre
+     
+     $('#filter').qtip({
+         position: {
+             my: 'top center',
+             at: 'bottom center',
+             adjust: {
+                 method: 'shift'
+             },
+             viewport: true
+         },
+         
+         show: {
+             event: 'click'
+         },
+         
+         hide: {
+             event: 'unfocus'
+         },
+         
+         style: {
+             classes: 'qtip-bootstrap qtip-filters',
+             tip: {
+                 width: 16,
+                 height: 8
+             }
+         },
+         
+         content: $('#filters')
+     });
+
+$('#about').qtip({
+    position: {
+        my: 'bottom center',
+        at: 'top center',
+        adjust: {
+            method: 'shift'
+        },
+        viewport: true
+    },
+    
+    show: {
+        event: 'click'
+    },
+    
+    hide: {
+        event: 'unfocus'
+    },
+    
+    style: {
+        classes: 'qtip-bootstrap qtip-about',
+        tip: {
+            width: 16,
+            height: 8
+        }
+    },
+    
+    content: $('#about-content')
+});
+
+ })
+      
+     
+     function getGroupColor(id_groupe) {
+    if (liste_gr.includes(id_groupe) == false) {
+
+        couleur = getRandomColor();
+        liste_gr.push(id_groupe);
+        liste_col.push(couleur);
+
+
+    } else {
+
+        index = liste_gr.indexOf(id_groupe);
+        couleur = liste_col[index];
+    }
+
+    return couleur;
+}
+
+function reset() {
+    liste_gr = [];
+    liste_col = [];
+    liste_edges = [];
+}
